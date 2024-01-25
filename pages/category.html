@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Категории</title>
+  <link rel="stylesheet" href="../css/category.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div id="modal" class="wrapper-modal">
+      <div class="modal">
+        <img onclick="closeModal()" class="img-close" src="../assets/images/Home/closebutton.svg" alt="jiooin" />
+        <div class="modal-content">
+          <header>
+            <img src="../assets/images/Home/logo-tablet.svg" alt="nnojno" />
+            Северяночка
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav class="header__nav">
+        <a id="logo" class="logo" href="../pages/home.html">
+          <img src="../assets/images/Home/logo-min.svg" alt="Logo" />
+        </a>
+        <a class="logo_tablet" href="../pages/home.html">
+          <img src="../assets/images/Home/logo-tablet.svg" alt="logo" />
+        </a>
+        <div class="header__nav_search">
+          <div class="wrapperr">
+            <button class="catalog confetti-button">
+              <img onclick="toggleDropdown()" id="menuIcon" src="../assets/images/Home/menu-min.svg" alt="menu" />
+              <a href="../pages/category.html" class="text_katalog">Каталог</a>
+            </button>
+          </div>
+          <div class="search">
+            <input id="searchInput" class="search_input" type="text" placeholder="Найти товар" />
+            <img class="search_icon" src="../assets/images/Home/search.svg" alt="search icon" />
+            <div class="search_result"></div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a href="favourite.html">
+              <img class="invert" src="../assets/images/Home/like-min.svg" alt="like" />Избранное
+            </a>
+          </li>
+          <li>
+            <a href="../pages/products.html">
+              <img src="../assets/images/Home/product-min.svg" alt="product-min" />продукты
+            </a>
+          </li>
+          <li>
+            <a class="counts_parent" href="cart.html">
+              <img src="../assets/images/Home/shopping-cart.svg" alt="shop cart" />Корзина
+            </a>
+          </li>
+        </ul>
+        <img width="40px" height="40px" id="profile-image" style="border-radius: 50%;"
+          src="../assets/images/Home/aleksiy.png" alt="user" />
+        <p id="username" class="user_info">SIGN IN</p>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div id="dropdown-content">
+    <div class="container">
+      <div class="dropdown_box">
+        <ul class="grid-item">
+          <li>
+            <a class="grid-itemm" href="#">Молоко, сыр, яйцо</a>
+          </li>
+          <li><a class="grid-itemm" href="#">Хлеб</a></li>
+          <li><a class="grid-itemm" href="#">Фрукты и овощи</a></li>
+          <li>
+            <a class="grid-itemm" href="#">Замороженные продукты</a>
+          </li>
+        </ul>
+        <ul class="second grid-item">
+          <li><a class="grid-itemm" href="#">Напитки</a></li>
+          <li>
+            <a class="grid-itemm" href="#">Кондитерские изделия</a>
+          </li>
+          <li><a class="grid-itemm" href="#">Чай, кофе</a></li>
+        </ul>
+        <ul class="second grid-item">
+          <li><a class="grid-itemm" href="#">Бакалея</a></li>
+          <li><a class="grid-itemm" href="#">Здоровое питание</a></li>
+          <li><a class="grid-itemm" href="#">Зоотовары</a></li>
+        </ul>
+        <ul class="second grid-item">
+          <li>
+            <a class="grid-itemm" href="#">Непродовольственные товары</a>
+          </li>
+          <li><a class="grid-itemm" href="#">Детское питание</a></li>
+          <li>
+            <a class="grid-itemm" href="#">Мясо, птица, колбаса</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <nav class="footer_navbar">
+    <div class="container">
+      <div class="footer_navbar_fixed">
+        <ul class="footer_nav_list">
+          <li>
+            <a class="red_hover" href="category.html">
+              <img src="../assets/images/Home/menu-dark.svg" alt="menu" />Каталог
+            </a>
+          </li>
+          <li>
+            <a class="red_hover" href="favourite.html">
+              <img src="../assets/images/Home/like-min.svg" alt="like" />Избранное
+            </a>
+          </li>
+          <li>
+            <a class="red_hover" href="products.html">
+              <img src="../assets/images/Home/product-min.svg" alt="product-min" />продукты
+            </a>
+          </li>
+          <li>
+            <a class="counts_parent red_hover" href="cart.html">
+              <img src="../assets/images/Home/shopping-cart.svg" alt="shop cart" />Корзина
+            </a>
+            <span class="count countt">0</span>
+          </li>
+          <li>
+            <a id="mobile-button" class="mobile-only " href="#">
+              <img src="../assets/images/Home/aleksiy.png" alt="lmlcsmp" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="katalog">
+      <div class="container">
+        <div class="hug">
+          <a href="../pages/home.html" class="hug__a">Главная</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.64645 5.64645C8.84171 5.45118 9.15829 5.45118 9.35355 5.64645L15.3536 11.6464C15.5488 11.8417 15.5488 12.1583 15.3536 12.3536L9.35355 18.3536C9.15829 18.5488 8.84171 18.5488 8.64645 18.3536C8.45118 18.1583 8.45118 17.8417 8.64645 17.6464L14.2929 12L8.64645 6.35355C8.45118 6.15829 8.45118 5.84171 8.64645 5.64645Z"
+              fill="#414141" />
+          </svg>
+          <a href="./gлавная.html" class="hug__a">Каталог</a>
+        </div>
+        <div class="fram">
+          <h1 class="fram__h1">Каталог</h1>
+          <div class="cards">
+            <div class="card__1">
+              <div class="card__img">
+                <img src="../assets/images/about/img.png" alt="jbkhjbu">
+                <div class="content1">
+                </div>
+                <h3 class="content__h3">Молоко, сыр, яйцо</h3>
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (1).png" alt="jbkhjbu">
+                <div class="content2">
+                </div>
+                <h3 class="content__h3">Хлеб</h3>
+
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (2).png" alt="jbkhjbu">
+                <div class="content3">
+                </div>
+                <h3 class="content__h3">Фрукты и овощи</h3>
+
+              </div>
+            </div>
+            <div class="card__1">
+              <div class="card__img">
+                <img src="../assets/images/about/img (3).png" alt="jbkhjbu">
+                <div class="content4">
+                </div>
+                <h3 class="content__h3">Замороженные продукты</h3>
+
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (4).png" alt="jbkhjbu">
+                <div class="content5">
+                </div>
+                <h3 class="content__h3">Напитки</h3>
+
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (5).png" alt="jbkhjbu">
+                <div class="content6">
+                </div>
+                <h3 class="content__h3">Кондитерские изделия</h3>
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (6).png" alt="jbkhjbu">
+                <div class="content7">
+                </div>
+                <h3 class="content__h3">Чай, кофе</h3>
+              </div>
+            </div>
+            <div class="card__1">
+              <div class="card__img">
+                <img src="../assets/images/about/img (7).png" alt="jbkhjbu">
+                <div class="content8">
+                </div>
+                <h3 class="content__h3">Бакалея</h3>
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (8).png" alt="jbkhjbu">
+                <div class="content9">
+                </div>
+                <h3 class="content__h3">Здоровое питание</h3>
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (9).png" alt="jbkhjbu">
+                <div class="content10">
+                </div>
+                <h3 class="content__h3">Зоотовары</h3>
+              </div>
+            </div>
+            <div class="card__1">
+              <div class="card__img">
+                <img src="../assets/images/about/img (10).png" alt="jbkhjbu">
+                <div class="content11">
+                </div>
+                <h3 class="content__h3">Детское питание</h3>
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (11).png" alt="jbkhjbu">
+                <div class="content12">
+                </div>
+                <h3 class="content__h3">Мясо, птица, колбаса</h3>
+              </div>
+              <div class="card__img">
+                <img src="../assets/images/about/img (12).png" alt="jbkhjbu">
+                <div class="content13">
+                </div>
+                <h3 class="content__h3">Непродовольственные товары</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
